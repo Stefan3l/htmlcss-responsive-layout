@@ -27,6 +27,7 @@
     max-width: 100%;
 }
 
+
 /*----------------
     LAYOUT
 ------------------*/
@@ -40,7 +41,14 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
+
+.product-info > .col-video, 
+.product-info > .col-dati {
+    width: 100%;
+}
+
 
 .gap-10 {
     gap: 10px;
@@ -71,6 +79,29 @@ h1 {
     text-shadow: .0625rem .0625rem .125rem #333;
 }
 
+h2 {
+    font-size: 1.5rem;
+    margin-top: .625rem;
+    margin-bottom: 1rem;
+    color: #4e3969;
+}
+
+h2 > span {
+    display: none;
+}
+
+
+h3 {
+    font-weight: 300;
+    font-size: 1rem;
+    color: grey;
+}
+
+h4 {
+    font-size: 1rem;
+    margin: 2.5rem 0;
+}
+
 
 /*----------------
     HEADER
@@ -89,6 +120,39 @@ header {
     MAIN
 ------------------*/
 
+main {
+    background-color: #f6f5f3;
+    padding: 1.25rem;
+}
+
+.container > .product-info {
+    background-color: #fff;
+}
+
+h4, ul {
+    margin-left: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul > li:not(:last-of-type) {
+    padding-bottom: 1.25rem;
+}
+
+.col-dati ul li > strong {
+    margin-left: .3125rem;
+}
+
+.col-dati ul li > strong:not(:last-of-type) {
+    margin-left: .3125rem;
+}
+
+.col-dati ul > li:last-child {
+    margin-bottom: 3.75rem;
+}
+
 /*----------------
     FOOTER
 ------------------*/
@@ -98,12 +162,42 @@ header {
 ------------------*/
 
 @media screen and (min-width: 768px) {
+    main {
+        padding-left: 3.75rem;
+        padding-right: 3.75rem;
+    }
+
     h1 {
         text-align: left;
         padding-left: 1.25rem;
     }
+
+    main .container h2 > span {
+        display: inline;
+    }
+
+    .row .col-dati > ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+
+    .col-dati ul li > strong:not(:last-of-type) {
+        margin-left: .3125rem;
+    }
 }
 
 @media screen and (min-width: 992px) {
+    .row > .col-video{
+        width: 70%;
+    }
 
+    .row > .col-dati {
+        width: 30%
+    }
+
+    .row .col-dati > .img-intro {
+        width: 100%;
+        height: 100%;
+    }
 }
