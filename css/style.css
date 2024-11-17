@@ -148,7 +148,11 @@ ul > li:not(:last-of-type) {
 }
 
 .col-dati ul li strong {
-    margin-left: .3125rem;
+    margin-left: 5px;
+}
+
+.col-dati ul li > b {
+    margin-right: 5px;
 }
 
 
@@ -164,12 +168,15 @@ ul > li:not(:last-of-type) {
 }
 
 .container .icon button {
-    padding: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
     border-radius: 100%;
     background-color: #fff;
     color: blue;
     border: none;
     font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .container .icon button .fa-facebook {
@@ -237,6 +244,37 @@ ul > li:not(:last-of-type) {
     FOOTER
 ------------------*/
 
+footer * {
+    background-color: #7c69a4;
+    color: #fff;
+}
+
+.row-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+.row-footer .col-footer-right {
+    padding-top: 20px;
+    padding-bottom: 36px;
+}
+
+.row-footer .col-footer-right nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 /*----------------
     RESPONSIVE
 ------------------*/
@@ -269,6 +307,11 @@ ul > li:not(:last-of-type) {
     .container .icon button {
         padding: 6px 46px;
         border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 30px;
     }
     
     .banner {
@@ -283,10 +326,14 @@ ul > li:not(:last-of-type) {
         float: left;
         padding-right: 10px;
     }
+
+    .container .description .description-img > p {
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {
-    .row > .col-video{
+    .row > .col-video {
         width: 70%;
     }
 
@@ -294,9 +341,9 @@ ul > li:not(:last-of-type) {
         width: 30%
     }
 
-    .row .col-dati > .img-intro {
+    .row .col-video > .img-intro {
         width: 100%;
-        display: block;
+        height: 100%;
     }
 
     .row .col-dati > ul {
@@ -304,10 +351,14 @@ ul > li:not(:last-of-type) {
         flex-direction: column;
     }
 
-    .icon button {
+    .container .icon button {
         display: flex;
         justify-content: center;
         gap: 6px;
+        font-size: 14px;
+        width: 150px;
+        height: 30px;
+        align-items: center;
     }
     
     .icon .visible-dekstop {
@@ -315,6 +366,26 @@ ul > li:not(:last-of-type) {
         color: #000;
         font-weight: 600;
     }
+ 
+    .row-footer {
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 20px;
+    }
 
+    .row-footer .col-footer-left {
+        align-items: flex-start;
+        padding-top: 0;
+    }
+
+    .row-footer .col-footer-left > p {
+        font-size: 12px;
+    }
+
+    .row-footer .col-footer-right nav {
+        gap: 10px;
+        font-size: 12px;
+        flex-wrap: nowrap;
+    }
     
 }
