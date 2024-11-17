@@ -150,7 +150,41 @@ ul > li:not(:last-of-type) {
     margin-bottom: 3.75rem;
 }
 
+.container .icon {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 26px;
 
+}
+
+.container .icon button {
+    padding: 20px;
+    border-radius: 100%;
+    background-color: #fff;
+    color: blue;
+    border: none;
+    font-size: 20px;
+}
+
+.container .icon button .fa-facebook {
+    color: #1a77f3;
+}
+
+.container .icon button .fa-twitter {
+    color: #009eff;
+}
+
+.container .icon button .fa-instagram {
+    color: #dd96d4;
+}
+
+.container .icon button .fa-pinterest, .fa-youtube {
+    color: #e62222;
+}
+
+.icon .visible-dekstop {
+    display: none;
+}
 
 /*----------------
     FOOTER
@@ -184,6 +218,11 @@ ul > li:not(:last-of-type) {
     .col-dati ul li > strong:not(:last-of-type) {
         margin-left: .3125rem;
     }
+
+    .container .icon button {
+        padding: 6px 46px;
+        border-radius: 40px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -203,6 +242,18 @@ ul > li:not(:last-of-type) {
     .row .col-dati > ul {
         gap: 0;
         flex-direction: column;
+    }
+
+    .icon button {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .icon .visible-dekstop {
+        display: flex;
+        color: #000;
+        font-weight: 600;
     }
 
     
