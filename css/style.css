@@ -61,7 +61,7 @@
 }
 
 .col {
-    flex-grow: 1;
+    width: calc((100% - 40px) / 5);
 }
 
 /*----------------
@@ -129,6 +129,12 @@ main {
     background-color: #fff;
 }
 
+.product-info .img-intro {
+    width: 100%;
+    display: block;
+}
+
+
 h4, ul {
     margin-left: 40px;
 }
@@ -186,6 +192,16 @@ ul > li:not(:last-of-type) {
     display: none;
 }
 
+.row-banner .col-banner > img {
+    max-width: 100%;
+}
+
+.banner {
+    padding: 42px 0;
+    max-width: 100%;
+    display: none;
+}
+
 /*----------------
     FOOTER
 ------------------*/
@@ -223,6 +239,10 @@ ul > li:not(:last-of-type) {
         padding: 6px 46px;
         border-radius: 40px;
     }
+    
+    .banner {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -246,7 +266,7 @@ ul > li:not(:last-of-type) {
 
     .icon button {
         display: flex;
-        align-items: center;
+        justify-content: center;
         gap: 6px;
     }
     
